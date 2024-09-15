@@ -1,0 +1,249 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;  /* Tipografía moderna */
+    background-color: #f7f8fa;
+    color: #333;
+}
+
+/* Header */
+.div-titulo {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+.div-titulo h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Menú de Navegación */
+.menu-navegacion {
+    background-color: #333;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.menu-navegacion ul li {
+    margin: 0 20px;
+}
+
+.menu-navegacion ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-navegacion ul li a:hover {
+    background-color: #4CAF50;
+}
+
+/* Contenedor General */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Formularios y Secciones */
+.div-formulario, .div-listado {
+    width: 100%;
+    margin-bottom: 30px;  /* Mayor espaciado */
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.div-formulario:hover, .div-listado:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);  /* Efecto hover */
+}
+
+/* Títulos */
+.div-formulario h2, .div-listado h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #4CAF50;
+    text-transform: uppercase;
+}
+
+/* Formularios */
+.div-formulario form input,
+.div-formulario form select,
+.div-formulario form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.div-formulario form input:focus,
+.div-formulario form select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Botones */
+.div-formulario form button {
+    background-color: #5a9fd4;  /* Color azul para los botones */
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.div-formulario form button:hover {
+    background-color: #4682b4;  /* Cambia el color en hover */
+    transform: translateY(-3px);
+}
+
+/* Estilo para el campo de búsqueda */
+.div-formulario input[type="text"] {
+    width: 100%;  /* Ancho completo */
+    padding: 12px;  /* Más espacio dentro del campo */
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;  /* Borde suave */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.div-formulario input[type="text"]:focus {
+    border-color: #4CAF50;  /* Cambiar borde cuando se selecciona */
+    outline: none;
+}
+
+/* Botón de búsqueda */
+.div-formulario button[type="button"] {
+    background-color: #5a9fd4;  /* Azul suave para botón */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.div-formulario button[type="button"]:hover {
+    background-color: #4682b4;  /* Cambiar a un azul más oscuro en hover */
+    transform: translateY(-2px);
+}
+
+/* Botones de lista */
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-editar {
+    background-color: #28a745;
+}
+
+.btn-editar:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+/* Listados */
+.div-listado h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.div-listado .div-estudiantes p,
+.div-listado .div-profesores p {
+    margin: 15px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.div-listado .div-estudiantes p:hover,
+.div-listado .div-profesores p:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para las etiquetas de texto en las listas */
+.div-listado p span {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .div-formulario, .div-listado {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}

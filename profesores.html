@@ -1,0 +1,55 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.html');
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Profesores</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="div-titulo">
+        <h1>Gestión de Profesores y Materias</h1>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="estudiantes.html">Gestión de Estudiantes</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="div-formulario">
+            <h2>Registrar Profesor</h2>
+            <form action="#" id="formProfesor">
+                <input type="text" id="nombreProfesor" placeholder="Nombre del Profesor">
+                <button type="submit" id="btnAgregarProfesor">Agregar Profesor</button>
+            </form>
+        </section>
+
+        <section class="div-formulario">
+            <h2>Asignar Materia a Profesor</h2>
+            <form action="#" id="formMateria">
+                <label for="profesorMateria">Seleccionar Profesor:</label>
+                <select id="profesorMateria"></select>
+                <input type="text" id="nombreMateria" placeholder="Nombre de la Materia">
+                <button type="submit" id="btnAsignarMateria">Asignar Materia</button>
+            </form>
+        </section>
+
+        <section class="div-listado">
+            <h2>Profesores Registrados</h2>
+            <div class="div-profesores"></div>
+        </section>
+    </main>
+    <script src="./js/app.js"></script>
+</body>
+</html>

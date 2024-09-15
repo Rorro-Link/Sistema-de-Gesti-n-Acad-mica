@@ -1,0 +1,64 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.html');
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Estudiantes</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="div-titulo">
+        <h1>Gestión de Estudiantes y Cursos</h1>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="profesores.html">Gestión de Profesores</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="div-formulario">
+            <h2>Registrar Curso</h2>
+            <form action="#" id="formCurso">
+                <input type="text" id="nombreCurso" placeholder="Nombre del Curso">
+                <button type="submit" id="btnAgregarCurso">Agregar Curso</button>
+            </form>
+            <div class="div-cursos"></div>  <!-- Contenedor donde se mostrarán los cursos registrados -->
+        </section>
+        
+        <section class="div-formulario">
+            <h2>Registrar Estudiante</h2>
+            <form action="#" id="formEstudiante">
+                <input type="text" id="nombreEstudiante" placeholder="Nombre del Estudiante">
+                <label for="cursosEstudiante">Seleccionar Cursos:</label>
+                <select id="cursosEstudiante" multiple></select>
+                <button type="submit" id="btnAgregarEstudiante">Agregar Estudiante</button>
+            </form>
+        </section>
+
+        <section class="div-formulario">
+            <h2>Buscar Estudiantes</h2>
+            <form action="#">
+                <input type="text" id="buscarEstudiantes" placeholder="Buscar por nombre">
+                <button type="button" onclick="filtrarEstudiantes()">Buscar</button>
+            </form>
+        </section>
+
+        <section class="div-listado">
+            <h2>Estudiantes Registrados</h2>
+            <div class="div-estudiantes"></div>
+        </section>
+    </main>
+    <script src="./js/app.js"></script>
+</body>
+</html>
